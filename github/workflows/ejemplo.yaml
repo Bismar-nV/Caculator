@@ -1,0 +1,14 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Revisar Proyecto Web
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+jobs:
+  primer_jobs:
+    runs_on: ubunto-latest
+    steps:
+      - name: Revisar archivos
+        run: ls
