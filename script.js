@@ -85,8 +85,12 @@ function Update() {
 }
 
 function HandleKeyDown(ev){
-    if(ev.keyCode == 32){
-        Saltar();
+    if(ev.keyCode == 32){ // Tecla espacio
+        if(parado) {
+            ReiniciarJuego(); // Reinicia si el juego está parado (Game Over)
+        } else {
+            Saltar(); // Si el juego está en marcha, el dinosaurio salta
+        }
     }
 }
 
@@ -238,4 +242,9 @@ function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft)
         ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
         (aRect.left + paddingLeft > (bRect.left + bRect.width))
     );
+}
+
+// Nueva función para reiniciar el juego
+function ReiniciarJuego() {
+    location.reload(); // Recarga la página para reiniciar todo
 }
