@@ -3,6 +3,7 @@ name: Despliegue Proyecto Web
 on:
   push:
     branches: ["main"]
+    workflow_dispatch:
 
 permissions:
   contents: read
