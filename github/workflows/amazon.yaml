@@ -1,0 +1,26 @@
+name: Deploy en AWS lightsail
+
+on:
+  push:
+    branches: ["main"]
+    workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: conexion SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key:${{secrets.SSH_PRIVATE_KEY}}
+
+      - name: Despliegue en lightsail
+        run: |
+          ssh -o StrictHostkeyChecking=no ubuntu@98.81.207.73 << 'EOF'
+          cd /var/www/html
+          sudo rm -rf *
+          git clone https://github.com/Bismar-nV/Caculator.git .
+          EOF
