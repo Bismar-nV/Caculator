@@ -27,6 +27,5 @@ jobs:
           else
             #si no existe, clonear el repositorio
             git clone https://github.com/Bismar-nV/Caculator.git .
-            git .
           fi            
           EOF
