@@ -21,7 +21,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no ubuntu@98.81.207.73 << 'EOF'
           cd /var/www/html
           # sudo rm -rf *
-          if [ -d ".git"]; then
+          if [ -d ".git" ]; then
             #si es un repositorio git , hacer pull
             git pull origin main
           else
