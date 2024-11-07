@@ -35,12 +35,10 @@ body{
 .dino {
   width: 84px;
   height: 84px;
-
   position: absolute;
   bottom: 22px;
   left: 42px;
   z-index: 2;
-
   background: url(img/dino.png) repeat-x 0px 0px;
   background-size: 336px 84px;
   background-position-x: 0px;
@@ -57,11 +55,9 @@ body{
 .suelo {
   width: 200%;
   height: 42px;
-
   position: absolute;
   bottom: 0;
   left: 0;
-
   background: url(img/suelo.png) repeat-x 0px 0px;
   background-size: 50% 42px;
 
@@ -70,28 +66,23 @@ body{
 .cactus{
   width: 46px;
   height: 96px;
-
   position: absolute;
   bottom: 16px;
   left: 600px;
   z-index: 1;
-
   background: url(img/cactus1.png) no-repeat;
 }
 .cactus2{
   width: 98px;
   height: 66px;
-
   background: url(img/cactus2.png) no-repeat;
 }
 
 .nube{
   width: 92px;
   height: 26px;
-
   position: absolute;
   z-index: 0;
-
   background: url(img/nube.png) no-repeat;
   background-size: 92px 26px;
 }
@@ -112,11 +103,8 @@ body{
 
 .game-over{
   display: none;
-
   position: absolute;
   width: 100%;
-
-
   text-align: center;
   color: #927e7e;
   font-size: 30px;
