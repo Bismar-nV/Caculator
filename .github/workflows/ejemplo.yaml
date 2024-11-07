@@ -1,6 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Revisar Proyecto Web
-
 
 on:
   # Runs on pushes targeting the default branch
@@ -13,7 +11,6 @@ jobs:
     steps:
       - name: Revisar archivos antes
         run: ls
+
       - name: Revisar checkout
-        run: actions/checkout@v4
-      - name: Revisar checkout
-        run: actions/checkout@v4
+        uses: actions/checkout@v4  # Cambia `run:` por `uses:`
