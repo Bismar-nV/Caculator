@@ -223,7 +223,7 @@ function DetectarColision() {
     for (var i = 0; i < obstaculos.length; i++) {
         if(obstaculos[i].posX > dinoPosX + dino.clientWidth) {
             //EVADE
-            break; //al estar en orden, no puede chocar con más
+            break; //al estar en orden, no puede chocar con más 10, 30, 15, 20
         }else{
             if(IsCollision(dino, obstaculos[i], 10, 30, 15, 20)) {
                 GameOver();

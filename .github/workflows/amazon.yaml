@@ -21,5 +21,11 @@ jobs:
           ssh -o StrictHostKeyChecking=no ubuntu@3.141.199.155 << 'EOF'
           cd /var/www/html
           sudo rm -rf *
-          git clone https://github.com/Bismar-nV/Caculator.git .
+          if [ -d ".git"]; then
+            #si es un repositorio git , hacer pull
+            git pull origin main
+          else
+            #si no existe, clonear el repositorio
+            git clone https://github.com/Bismar-nV/Caculator.git .
+            git .
           EOF
